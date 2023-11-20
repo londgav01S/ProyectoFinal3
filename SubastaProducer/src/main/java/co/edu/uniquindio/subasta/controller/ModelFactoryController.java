@@ -1,11 +1,15 @@
 package co.edu.uniquindio.subasta.controller;
 
+import co.edu.uniquindio.subasta.config.RabbitFactory;
 import co.edu.uniquindio.subasta.exceptions.AnuncianteException;
 import co.edu.uniquindio.subasta.exceptions.CompradorException;
 import co.edu.uniquindio.subasta.exceptions.UsuarioException;
 import co.edu.uniquindio.subasta.model.*;
 import co.edu.uniquindio.subasta.utils.*;
 import co.edu.uniquindio.subasta.viewController.LoginViewController;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -15,12 +19,15 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ModelFactoryController {
     Subasta subasta;
+    RabbitFactory rabbitFactory;
+    ConnectionFactory connectionFactory;
 
     public void mostrarMensajeAlerta(String titulo, String header, String contenido, Alert.AlertType tipoAlerta) {
         Alert alert = new Alert(tipoAlerta);
@@ -66,6 +73,24 @@ public class ModelFactoryController {
 
     public ModelFactoryController() {
         inicializarDatos();
+        initRabbitConnection();
+    }
+
+    private void initRabbitConnection() {
+        rabbitFactory = new RabbitFactory();
+        connectionFactory = rabbitFactory.getConnectionFactory();
+        System.out.println("conexion establecidad");
+    }
+
+    public void producirMensaje(String queue, String message) {
+        try (Connection connection = connectionFactory.newConnection();
+             Channel channel = connection.createChannel()) {
+            channel.queueDeclare(queue, false, false, false, null);
+            channel.basicPublish("", queue, null, message.getBytes(StandardCharsets.UTF_8));
+            System.out.println(" [x] Sent '" + message + "'");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //----------------------------------------  Singleton ---------------------------------------------------------------

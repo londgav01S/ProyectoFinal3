@@ -3,8 +3,7 @@ module co.edu.uniquindio.subasta {
     requires javafx.fxml;
     requires java.desktop;
     requires java.logging;
-
-
+    requires com.rabbitmq.client;
 
 
     opens co.edu.uniquindio.subasta to javafx.fxml;
