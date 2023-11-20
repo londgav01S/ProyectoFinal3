@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="625.0" prefWidth="691.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.subasta.viewController.InicialViewController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="7.0" prefHeight="614.0" prefWidth="680.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Autenticacion">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane layoutX="381.0" layoutY="159.0" prefHeight="266.0" prefWidth="243.0">
+                            <items>
+                                <fx:include source="LoginView.fxml" />
+                            </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Registrarse">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="543.0" prefWidth="658.0">
+                     <children>
+                        <SplitPane layoutX="4.0" prefHeight="578.0" prefWidth="669.0">
+                         <items>
+                             <fx:include source="RegistroUsuarioView.fxml" />
+                         </items>
+                     </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

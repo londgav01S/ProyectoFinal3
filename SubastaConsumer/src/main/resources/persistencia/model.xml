@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.8" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.subasta.model.Subasta" id="Subasta0">
+  <void property="listaAnunciantes">
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Anunciante" id="Anunciante0">
+     <void property="correoElectronico">
+      <string>royergarci10@gmail.com</string>
+     </void>
+     <void property="identificacion">
+      <string>1098546043</string>
+     </void>
+     <void property="listaAnuncios">
+      <null/>
+     </void>
+     <void property="nombre">
+      <string>Royer garcia palacio </string>
+     </void>
+     <void property="telefono">
+      <string>3245646473</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Anunciante" id="Anunciante1">
+     <void property="correoElectronico">
+      <string>san</string>
+     </void>
+     <void property="fechaNacimiento">
+      <string>2003-12-01</string>
+     </void>
+     <void property="identificacion">
+      <string>1234</string>
+     </void>
+     <void property="listaAnuncios">
+      <null/>
+     </void>
+     <void property="nombre">
+      <string>santiago</string>
+     </void>
+     <void property="telefono">
+      <string>1245</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaAnuncios">
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Anuncio">
+     <void property="codigo">
+      <string>001</string>
+     </void>
+     <void property="descripcion">
+      <string>Es una moto muy rapida con muy buen torque</string>
+     </void>
+     <void property="nombre">
+      <string>Venta Mt09</string>
+     </void>
+     <void property="valorInicial">
+      <double>5000000.0</double>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Anuncio">
+     <void property="codigo">
+      <string>001</string>
+     </void>
+     <void property="descripcion">
+      <string>Chimba de moto</string>
+     </void>
+     <void property="nombre">
+      <string>Moto</string>
+     </void>
+     <void property="valorInicial">
+      <double>500000.0</double>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaCompradores">
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Comprador" id="Comprador0">
+     <void property="correoElectronico">
+      <string>asd</string>
+     </void>
+     <void property="identificacion">
+      <string>asdasd</string>
+     </void>
+     <void property="listaPujas">
+      <void method="add">
+       <object class="co.edu.uniquindio.subasta.model.Puja" id="Puja0">
+        <void property="anuncio">
+         <object class="co.edu.uniquindio.subasta.model.Anuncio">
+          <void property="anunciante">
+           <object class="co.edu.uniquindio.subasta.model.Anunciante">
+            <void property="correoElectronico">
+             <string>luichiMail</string>
+            </void>
+            <void property="identificacion">
+             <string>1232589857</string>
+            </void>
+            <void property="listaAnuncios">
+             <null/>
+            </void>
+            <void property="nombre">
+             <string>José</string>
+            </void>
+            <void property="telefono">
+             <string>315450677</string>
+            </void>
+           </object>
+          </void>
+          <void property="codigo">
+           <string>123</string>
+          </void>
+          <void property="descripcion">
+           <string>Carrito lindo uwu</string>
+          </void>
+          <void property="nombre">
+           <string>Carro</string>
+          </void>
+          <void property="valorInicial">
+           <double>120.0</double>
+          </void>
+         </object>
+        </void>
+        <void property="comprador">
+         <object idref="Comprador0"/>
+        </void>
+        <void property="estado">
+         <object class="java.lang.Enum" id="EstadoPuja0" method="valueOf">
+          <class>co.edu.uniquindio.subasta.model.EstadoPuja</class>
+          <string>PENDIENTE</string>
+         </object>
+        </void>
+        <void property="valorInicial">
+         <double>115.0</double>
+        </void>
+       </object>
+      </void>
+     </void>
+     <void property="nombre">
+      <string>asd</string>
+     </void>
+     <void property="telefono">
+      <string>asd</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaProductos">
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Producto">
+     <void property="nombre">
+      <string>moto</string>
+     </void>
+     <void property="nombreAnunciante">
+      <string>sexo</string>
+     </void>
+     <void property="tipo">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.subasta.model.TipoProducto</class>
+       <string>VEHICULOS</string>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaPujas">
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Puja">
+     <void property="anuncio">
+      <object class="co.edu.uniquindio.subasta.model.Anuncio">
+       <void property="anunciante">
+        <object class="co.edu.uniquindio.subasta.model.Anunciante">
+         <void property="correoElectronico">
+          <string>luichiMail</string>
+         </void>
+         <void property="identificacion">
+          <string>1232589857</string>
+         </void>
+         <void property="listaAnuncios">
+          <null/>
+         </void>
+         <void property="nombre">
+          <string>José</string>
+         </void>
+         <void property="telefono">
+          <string>315450677</string>
+         </void>
+        </object>
+       </void>
+       <void property="codigo">
+        <string>123</string>
+       </void>
+       <void property="descripcion">
+        <string>Carrito lindo uwu</string>
+       </void>
+       <void property="nombre">
+        <string>Carro</string>
+       </void>
+       <void property="valorInicial">
+        <double>120.0</double>
+       </void>
+      </object>
+     </void>
+     <void property="comprador">
+      <object idref="Comprador0"/>
+     </void>
+     <void property="estado">
+      <object idref="EstadoPuja0"/>
+     </void>
+     <void property="valorInicial">
+      <double>123.0</double>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object idref="Puja0"/>
+   </void>
+  </void>
+  <void property="listaUsuarios">
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Usuario">
+     <void property="contrasenia">
+      <string>213</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>sexo</string>
+     </void>
+     <void property="persona">
+      <object idref="Comprador0"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Usuario">
+     <void property="contrasenia">
+      <string>123</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>royer10</string>
+     </void>
+     <void property="persona">
+      <object idref="Anunciante0"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.subasta.model.Usuario">
+     <void property="contrasenia">
+      <string>1234</string>
+     </void>
+     <void property="nombreUsuario">
+      <string>londgav</string>
+     </void>
+     <void property="persona">
+      <object idref="Anunciante1"/>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
